@@ -1,4 +1,4 @@
-import { Feature, PlacesResponse } from "@/interfaces/places";
+import { Feature } from "@/interfaces/places";
 import { createContext } from "react";
 
 export interface PlacesContextProps {
