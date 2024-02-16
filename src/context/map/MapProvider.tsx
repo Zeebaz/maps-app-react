@@ -44,7 +44,7 @@ export const MapProvider: React.FC<PropsWithChildren> = ({ children }) => {
     }
     // TODO: limpiar polylines
     dispatch({ type: "setMarkers", payload: newMarkers });
-  }, [places]);
+  }, [places, state]);
 
   const setMap = (map: Map) => {
     const myLocationPopup = new Popup().setHTML(
@@ -65,7 +65,7 @@ export const MapProvider: React.FC<PropsWithChildren> = ({ children }) => {
     const response = await directionsApi.get<DirectionsResponse>(
       `/${start.join(",")};${end.join(",")}`
     );
-    let { distance, duration, geometry } = response.data.routes[0];
+    const { distance, duration, geometry } = response.data.routes[0];
     const { coordinates: coords } = geometry;
 
     let kms = distance / 1000;

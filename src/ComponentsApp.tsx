@@ -1,11 +1,17 @@
 import { useState } from 'react';
 
-const TabStrip = (props) => {
-  const isActive = (index) => {
+interface Props {
+  activeIndex: number;
+  onActiveIndexChange: (index: number) => void;
+  titles: string[];
+}	
+
+const TabStrip = (props : Props) => {
+  const isActive = (index : number) => {
     return index === getActiveIndex();
   }
   
-  const setActiveIndex = (selectedIndex) => {props.setActiveIndex(selectedIndex)}
+  const setActiveIndex = (selectedIndex: number) => {props.onActiveIndexChange(selectedIndex)}
   
   const getActiveIndex = () => {return props.activeIndex}
 
