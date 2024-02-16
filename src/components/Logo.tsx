@@ -1,4 +1,4 @@
-import tulogo from "@/../tulogo.png";
+import tulogo from "@/../public/tulogo.png";
 import { PropsWithChildren, useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 
