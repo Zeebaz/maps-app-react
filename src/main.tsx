@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import MapsApp from "./MapsApp.tsx";
 import "./styles.css";
 import mapboxgl from "mapbox-gl";
+
+import MapsApp from "./MapsApp";
 
 mapboxgl.accessToken = import.meta.env.VITE_MAP_BOX_TOKEN;
 
